@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Shopping Cart</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h2 class="ti">Shopping Cart</h2>
+    <div class="container">
+      <div class="articles">
+        <div>
+          <img src="images/shoe.jpg" />
+          <div class="prod">
+            <h3 class="tit" id="brand1">Shoe</h3>
+            <br />
+            <h4 id="price1">19.90</h4>
+            <h4>$</h4>
+          </div>
+          <div class="inputs">
+            <input
+              type="number"
+              id="quantity1"
+              name="quantity1"
+              min="1"
+              max="99"
+              value="1"
+            />
+            <select id="size1" name="size1" onclick="deleteE('message1')">
+              <option value="size" disabled selected>Size</option>
+              <option value="XS">7</option>
+              <option value="S">8</option>
+              <option value="M">9</option>
+              <option value="L">10</option>
+            </select>
+            <div>
+              <button class="addTo" onclick="add(1)">Add</button>
+            </div>
+          </div>
+          <p id="message1"></p>
+        </div>
+        <div>
+          <img src="images/shoe.jpg" />
+          <div class="prod">
+            <h3 class="tit" id="brand2">Shoe</h3>
+            <h4 id="price2">19.90</h4>
+            <h4>$</h4>
+          </div>
+          <div class="inputs">
+            <input
+              type="number"
+              id="quantity2"
+              name="quantity2"
+              min="1"
+              max="99"
+              value="1"
+            />
+            <select id="size2" name="size2" onclick="deleteE('message2')">
+              <option value="size" disabled selected>Size</option>
+              <option value="XS">7</option>
+              <option value="S">8</option>
+              <option value="M">9</option>
+              <option value="L">10</option>
+            </select>
+            <div>
+              <button class="addTo" onclick="add(2)">Add</button>
+            </div>
+          </div>
+          <p id="message2"></p>
+        </div>
+        <div>
+          <img src="images/bag.jpg" />
+          <div class="prod">
+            <h3 class="tit" id="brand3">Bag</h3>
+            <h4 id="price3">16.90</h4>
+            <h4>$</h4>
+          </div>
+          <div class="inputs">
+            <input
+              type="number"
+              id="quantity3"
+              name="quantity3"
+              min="1"
+              max="99"
+              value="1"
+            />
+            <select id="size3" name="size3" onclick="deleteE('message3')">
+              <option value="size" disabled selected>Size</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <div>
+              <button class="addTo" onclick="add(3)">Add</button>
+            </div>
+          </div>
+          <p id="message3"></p>
+        </div>
+      </div>
+      <div class="cart">
+        <ul id="items"></ul>
+        <h3 id="total" style="text-align: right">Total: 0 $</h3>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
